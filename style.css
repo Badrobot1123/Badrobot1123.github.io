@@ -3,13 +3,14 @@ h2 {color:dimgray}
 body{
     background-color:aquamarine;
 }
-nav {
-    background-color: forestgreen;
-}
 a {
     color:lightblue;
     text-decoration: none;
 }
 a:hover{
     text-decoration: underline;
+}
+nav {
+    background-color: green;
+    width: 25%;
 }
