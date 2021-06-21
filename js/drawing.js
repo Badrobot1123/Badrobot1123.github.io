@@ -3,7 +3,9 @@ var unit = 20;
 var x = 0;
 var y = 0;
 var scale = 1;
-const scaleChange = 0.5;
+var characterX = 0;
+var direction = 1;
+const scaleChange = 0.1;
 window.onload = init;
 // When there is a key that has been pressed, run the checkkey function
 document.onkeydown = checkKey;
@@ -39,6 +41,17 @@ function checkKey(e) {
         y++;
         draw.translate(0,unit);
     }
+    if (e.keyCode == '65') { // a
+        characterX--;
+        direction = -1;
+        updateCharacter();
+    }
+    if (e.keyCode == '68') { // d
+        characterX++;
+        direction = 1;
+    updateCharacter();
+    
+    }
     if (e.keyCode == '187') { // +
         draw.scale(1/scale,1/scale);
         scale += scaleChange;
@@ -51,6 +64,15 @@ function checkKey(e) {
     }
 
     updateUI();
+    
+    
+}
+
+function updateCharacter(){
+    clear();
+    drawBackground();
+    drawMario(characterX) 
+    
 }
 function updateUI() {
     document.getElementById("xTranslate").innerHTML = "x : " + x;

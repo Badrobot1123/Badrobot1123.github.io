@@ -39,9 +39,9 @@ function drawBlock() {
 // 2. condition (qustion) to loop
 // 3. update the variable
 function drawBlocks() {
-    yPositin = 0;
-    magnify = 1
-    numBlock = 1;
+    yPositin = 2180;
+    magnify = 0.2
+    numBlock = 21;
     for (column = 0; column < numBlock; column++) {
         draw.save();
         draw.scale(magnify,magnify);

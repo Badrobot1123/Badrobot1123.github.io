@@ -1,7 +1,5 @@
 function drawRunningMario(){
 draw.fillStyle = 'rgb(161,61,46)'; // red
-draw.fillRect(5*unit,0*unit,6*unit,1*unit);
-draw.fillRect(4*unit,1*unit,10*unit,1*unit);
 draw.fillRect(8*unit,7*unit,1*unit,1*unit);
 draw.fillRect(4*unit,9*unit,1*unit,4*unit);
   
